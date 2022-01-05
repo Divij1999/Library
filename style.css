@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(173, 165, 165);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width:100vw;
+    gap:40px;
+    background-color: rgb(173, 165, 165);
+    color:white;
+}
+
+.logo {
+    font-size: 3em;
+    padding: 20px;
+    background-color: rgb(14, 153, 153);
+}
+
+.below_header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.open_form {
+    width: 200px;
+    height: 80px;
+    font-size: 1.5em;
+    
+}
+
+.form {
+    position:fixed;
+    left:39vw;
+    bottom:30vh;
+    display:none;
+
+}
+
+form {
+
+    height: 520px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding:20px;
+    align-items: center;
+    background-color: rgb(74, 74, 255);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+form input {
+    border-radius: 8px;
+    height: 40px;
+    width: 250px;
+}
+/*For radio buttons*/
+#yes, #no {
+    height:auto;
+    width:auto;
+}
+
+
+form p {
+    font-size: 1.5em;
+}
+
+#submit {
+    width: 130px;
+    height: 50px;
+    font-size: 1.1em;
+}
+
+.library {
+    display: flex;
+    flex-wrap:wrap;
+    width:75.32vw;
+    gap:105px;
+    margin:auto;
+    margin-top: 350px;
+}
+
+.toggle, .remove {
+    height:50px;
+    width:120px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    
+}
+
+.remove {
+    background-color: rgb(250, 66, 66);
+    
+}
+
