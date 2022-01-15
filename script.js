@@ -1,26 +1,31 @@
 let myLibrary=[];
 
-function Book(title, author, pages, read) {
-    this.title=title;
-    this.author=author;
-    this.pages=pages;
-    this.read=read;
+class Book{
+    constructor(title, author, pages, read) {
+        this.title=title;
+        this.author=author;
+        this.pages=pages;
+        this.read=read;
+    }
+    
+    toggleRead = function(e) {
+        let index=e.target.getAttribute("data-key");
+        const button=document.querySelector(`.toggle[data-key="${index}"]`);
+        if(myLibrary[index].read==="Read"){
+            myLibrary[index].read="Not Read";
+            button.innerText="Not Read";
+            button.setAttribute("style", "background-color:white;");
+        }
+        else{
+            myLibrary[index].read="Read";
+            button.innerText="Read";
+            button.setAttribute("style", "background-color:green;");
+        }
+    };
+    
+
 }
 
-Book.prototype.toggleRead=function(e) {
-    let index=e.target.getAttribute("data-key");
-    const button=document.querySelector(`.toggle[data-key="${index}"]`);
-    if(myLibrary[index].read==="Read"){
-        myLibrary[index].read="Not Read";
-        button.innerText="Not Read";
-        button.setAttribute("style", "background-color:white;");
-    }
-    else{
-        myLibrary[index].read="Read";
-        button.innerText="Read";
-        button.setAttribute("style", "background-color:green;");
-    }
-}
 
 function addBookToLibrary(e) {
 
