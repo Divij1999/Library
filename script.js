@@ -8,6 +8,7 @@ class Book{
         this.read=read;
     }
     
+    
     toggleRead = function(e) {
         let index=e.target.getAttribute("data-key");
         const button=document.querySelector(`.toggle[data-key="${index}"]`);
