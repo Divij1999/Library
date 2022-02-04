@@ -27,6 +27,16 @@ class Book{
 
 }
 
+const checkFormValidation= (e) => {
+
+    const title=document.getElementById("title");
+    const author=document.getElementById("author");
+    const pages=document.getElementById("pages");
+    if(title.checkValidity() && author.checkValidity() && pages.checkValidity())
+        return true;
+    else 
+        return false;
+};
 
 function addBookToLibrary(e) {
 
@@ -143,7 +153,10 @@ form.addEventListener("click", () => {
 
 //Adding the book details to library array and displaying the new book
 const addBook=document.getElementById("submit");
-addBook.addEventListener("click", addBookToLibrary); 
+addBook.addEventListener("click", (e) =>{
+    if(checkFormValidation(e))
+        addBookToLibrary(e);
+}); 
 
 
 
